@@ -13,6 +13,7 @@
   <style media="screen">
     body { font-family: 'IBM Plex Serif', serif; !important;}
     #hotel-hint { font-size: 80%;}
+
   </style>
   </head>
 
@@ -30,7 +31,9 @@
 
   {% for message in get_flashed_messages() %}
   <div class="container text-center">
-    <div class="p-3 mb-2 bg-danger text-white">{{ message }}</div>
+    <br>
+    <br>
+    <div class="p-3 mb-2 alert alert-primary">{{ message }}</div>
   </div>
   <br>
   {% endfor %}
