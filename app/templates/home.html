@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Get MOSTay{% endblock %}
+
+{% block main %}
+
+<div class="bg-light p-5 rounded-lg m-3">
+  <h1 class="display-4">Hello Colleague!</h1>
+    <hr class="my-4">
+  <p class="lead">Easily get three months of Mandarin Oriental MOStay availabilities. Multiple properties are supported!</p>
+</div>
+
+<div class="container">
+<div class="row">
+   <div class="col-2">
+
+   <img src="{{ fan }}" alt="" width="90%" class="my-5">
+
+   </div>
+   <div class="col-10">
+      <div class="col-auto">
+         <br>
+         <form action="/results" method="post">
+            <label for="hotel_location" class="col-form-label" aria-describedby="hotel-hint">Which hotel(s)?</label>
+            <br>
+            <input type="text" name="hotel_location" value="" required>
+            <br>
+            <span id="hotel-hint" class="form-text">Enter hotel locations separated by commas.</span>
+            <br>
+            <br>
+            <input type="submit" class="btn btn-outline-primary btn-sm" value="Get MOStay" onclick="$('#loading').show();"></input>
+            <br>
+            <br>
+            <div id="loading" style="display:none;"><img src="https://na.shopmo.com/images/misc/ajax-loader.gif" width="8%" alt="" /></div>
+      </div>
+   </div>
+</div>
+</form>
+
+
+
+
+{% endblock %}

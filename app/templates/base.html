@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <title>{% block title %}{% endblock %}</title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <style media="screen">
+    body { font-family: 'IBM Plex Serif', serif; !important;}
+    #hotel-hint { font-size: 80%;}
+  </style>
+  </head>
+
+  <body>
+  <nav class="navbar navbar-light bg-faded justify-content-between flex-nowrap flex-row">
+      <div class="container">
+          <a href="/" class="navbar-brand float-left">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwzWoIEM9YTmM3yHdXWvIUJ7GmpPmBFljf_A&usqp=CAU"
+          alt="" width="20%" class="align-text-top"></a>
+                <div class="nav navbar-nav flex-row float-right">
+              <a class="nav-item nav-link" href="/">Home</a>
+          </div>
+      </div>
+  </nav>
+
+  {% for message in get_flashed_messages() %}
+  <div class="container text-center">
+    <div class="p-3 mb-2 bg-danger text-white">{{ message }}</div>
+  </div>
+  <br>
+  {% endfor %}
+
+  {% block main %}{% endblock %}
+  </body>
+
+</html>
