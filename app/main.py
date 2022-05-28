@@ -45,6 +45,7 @@ def results():
         print('\n   No results, please try again !\n')
         flash('No results, please try again !')
 
+
     calendar = '/static/imgs/mo_stay.png'
 
     return render_template('results.html', calendar=calendar)

@@ -12,27 +12,25 @@
 
 <div class="container">
 <div class="row">
-   <div class="col-2">
-
-   <img src="{{ fan }}" alt="" width="90%" class="my-5">
-
+   <div class="col-sm">
+   <img src="{{ fan }}" alt="" width="100%" class="my-auto">
+   <p class="text-center small-text">Can you guess which signature fan this is?</p>
    </div>
-   <div class="col-10">
-      <div class="col-auto">
+
+   <div class="col-sm my-auto text-center">
          <br>
          <form action="/results" method="post">
             <label for="hotel_location" class="col-form-label" aria-describedby="hotel-hint">Which hotel(s)?</label>
             <br>
-            <input type="text" name="hotel_location" value="" required>
+            <input type="text" class="form-control" name="hotel_location" value="" required>
             <br>
-            <span id="hotel-hint" class="form-text">Enter hotel locations separated by commas.</span>
+            <span class="form-text small-text">Enter hotel locations separated by commas.</span>
             <br>
             <br>
             <input type="submit" class="btn btn-outline-primary btn-sm" value="Get MOStay" onclick="$('#loading').show();"></input>
             <br>
             <br>
             <div id="loading" style="display:none;"><img src="https://na.shopmo.com/images/misc/ajax-loader.gif" width="8%" alt="" /></div>
-      </div>
    </div>
 </div>
 </form>
