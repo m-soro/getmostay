@@ -49,10 +49,8 @@ def results():
                 combine_images([path+'1.png',path+'2.png',path+'3.png'], path +'mo_'+ hotel_location +'.png',hotel_location)
                 combine_images([path+hotel_location+'_image.png',path +'mo_'+ hotel_location +'.png'], path + 'mo_' + hotel_location +'.png',hotel_location)
                 combine_images(glob.glob(path+'mo_*.png'),path+'mo_stay.png',stack='v')
-
                 calendar = '/static/imgs/mo_stay.png'
-
-                return render_template('results.html', calendar=calendar, answer=fan_answer, image=fan_image)
+            return render_template('results.html', calendar=calendar, answer=fan_answer, image=fan_image)
 
         # if page is not available before scraping
         except StaleElementReferenceException:
@@ -61,7 +59,7 @@ def results():
 
         return render_template('no-results.html', answer=fan_answer, image=fan_image)
 
-    # if location is invalid    
+    # if location is invalid
     else:
         flash('Requested destination is not valid. Please check the spelling or refer to Mandarin Oriental locations.')
         return render_template('no-results.html', answer=fan_answer, image=fan_image)
