@@ -17,10 +17,10 @@ def get_mostay(hotel_location,hotel_code):
     chrome_options.add_argument('--no-sandbox')
 
     # un-comment for heroku
-    # driver = webdriver.Chrome(executable_path=os.environ.get('CHROMEDRIVER_PATH'), chrome_options=chrome_options)
+    driver = webdriver.Chrome(executable_path=os.environ.get('CHROMEDRIVER_PATH'), chrome_options=chrome_options)
 
     # un-comment to test locally
-    driver = webdriver.Chrome(options=chrome_options, service= ( Service('/Users/marksoro/chromedriver/chromedriver')) )
+    # driver = webdriver.Chrome(options=chrome_options, service= ( Service('/Users/marksoro/chromedriver/chromedriver')) )
 
     driver.get(site+"arrive="+date+"&depart="+date+"&hotel="+ hotel_code +
                                   "&currency=USD&rooms=1&adults=2&promo=Stay%40MO%242016%40")

@@ -5,7 +5,7 @@
 {% block main %}
 
 
-<div class="container" id="results-page">
+<div class="container">
 <h3 class="text-center">Your Results</h3>
    <br>
    <img src='{{ calendar }}' class="img-fluid rounded" alt="Selected MO calendar(s)">
@@ -14,6 +14,11 @@
    <a href='{{ calendar }}' download>
    <p class="text-center">Click here to download the image</p>
    </a>
+</div>
+
+<div class="container text-center">
+  <img src="{{ image }}" alt="" width="40%" class="my-auto">
+  <p><em>This signature fan is from Mandarin Oriental {{ answer }}</em></p>
 </div>
 
 {% endblock %}

@@ -4,7 +4,14 @@
 
 {% block main %}
 
-<h1>No results</h1>
-<a href="/"><h2>Try again =)</h2></a>
+<h4 class="text-center">Request returned no result. Please try again.</h4>
+
+<a href="/"><h4 class="text-center">Back to Home</h4></a>
+
+<div class="container text-center">
+  <img src="{{ image }}" alt="" width="40%" class="my-auto">
+  <p><em>This signature fan is from Mandarin Oriental {{ answer }}</em></p>
+</div>
+
 
 {% endblock %}
