@@ -1,1 +1,1 @@
-('https://photos.mandarinoriental.com/is/image/MandarinOriental/london-hotel-signature-fan?', 'london')
+('https://photos.mandarinoriental.com/is/image/MandarinOriental/boston-hotel-signature-fan?', 'boston')
