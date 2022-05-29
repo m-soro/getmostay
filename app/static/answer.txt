@@ -1,1 +1,1 @@
-('https://photos.mandarinoriental.com/is/image/MandarinOriental/wangfujing-hotel-signature-fan?', 'wangfujing')
+('https://photos.mandarinoriental.com/is/image/MandarinOriental/london-hotel-signature-fan?', 'london')
